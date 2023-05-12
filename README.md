@@ -6,14 +6,14 @@ Create the following directory structure
 ```
 .vim/
  ├── autoload/
- ├── backup/
- ├── colors/
+ ├── general/
  └── plugged/
 ```
 
+Create vim configuration hierarchy
+
 ```bash
-# Create vim configuration hierarchy
-mkdir -p ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/colors ~/.vim/plugged
+mkdir -p ~/.vim ~/.vim/autoload ~/.vim/general ~/.vim/plugged
 ```
 
 Grab the vimrc file and move it into your home directory as a dot file (ie. `.vimrc`)
@@ -21,4 +21,10 @@ Grab the vimrc file and move it into your home directory as a dot file (ie. `.vi
 Unix
 ```bash
 curl -fLo ~/.vimrc https://raw.githubusercontent.com/smooti/dots/master/vimrc
+```
+
+Grab the general vim config file
+
+```bash
+curl -fLo ~/.vim/general/main.vim https://raw.githubusercontent.com/smooti/dots/master/vim/general/main.vim
 ```
