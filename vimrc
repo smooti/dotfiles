@@ -4,13 +4,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
-" Plugins
-call plug#begin('~/.vim/plugged')
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-call plug#end()
+source ~/.vim/pluggs/main.vim   " Load Plugins
+source ~/.vim/general/main.vim  " Load General Config
 
 " Set colorscheme
 colorscheme catppuccin_mocha
-
-" General Config
-source ~/.vim/general/main.vim
