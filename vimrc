@@ -8,4 +8,4 @@ source ~/.vim/pluggs/main.vim   " Load Plugins
 source ~/.vim/general/main.vim  " Load General Config
 
 " Set colorscheme
-colorscheme catppuccin_mocha
+" colorscheme catppuccin_mocha
