@@ -1,7 +1,11 @@
 # ~/.config/starship.toml
 
 add_newline = false
-format = """$os$username$hostname$kubernetes$directory$git_branch$git_status"""
+command_timeout = 1000
+format = """
+$os$username$hostname$kubernetes$directory$git_branch$git_status
+[> ](bold blue)
+"""
 
 # Drop ugly default prompt characters
 [character]
@@ -15,7 +19,7 @@ format = '[$symbol](bold white) '
 disabled = false
 
 [os.symbols]
-Windows = ''
+Windows = ' '
 Arch = '󰣇'
 Ubuntu = ''
 Macos = '󰀵'
@@ -66,7 +70,7 @@ behind = '⇣${count}'
 stashed = ' '
 modified = ' '
 staged = '[++\($count\)](green)'
-renamed = '襁 '
+renamed = '襁 '
 deleted = ' '
 
 # Shows kubernetes context and namespace
