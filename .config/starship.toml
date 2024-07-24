@@ -31,28 +31,28 @@ Macos = '󰀵'
 style_user = 'white bold'
 style_root = 'black bold'
 format = '[$user]($style) '
-disabled = false
 show_always = true
+disabled = true
 
 # Shows the hostname
 [hostname]
 ssh_only = false
 format = 'on [$hostname](bold yellow) '
-disabled = false
+disabled = true
 
 # Shows current directory
 [directory]
-truncation_length = 1
-truncation_symbol = '…/'
+# truncation_length = 1
+# truncation_symbol = '…/'
 home_symbol = '󰋜 ~'
 read_only_style = '197'
 read_only = '  '
-format = 'at [$path]($style)[$read_only]($read_only_style) '
+format = '[$path]($style)[$read_only]($read_only_style) '
 
 # Shows current git branch
 [git_branch]
 symbol = ' '
-format = 'via [$symbol$branch]($style)'
+format = 'on [$symbol$branch]($style)'
 # truncation_length = 4
 truncation_symbol = '…/'
 style = 'bold green'
@@ -76,7 +76,7 @@ deleted = ' '
 # Shows kubernetes context and namespace
 [kubernetes]
 format = 'via [󱃾 $context\($namespace\)](bold purple) '
-disabled = false
+disabled = true
 
 # ---
 
