@@ -1,15 +1,15 @@
 add_newline = false
 command_timeout = 1000
 format = """
-$env_var$os$username$hostname$kubernetes$directory$git_branch$git_status
+$os\
+$username\
+$hostname\
+$kubernetes\
+$directory\
+$git_branch\
+$git_status
 $character
 """
-
-[env_var]
-symbol = "╭╴"
-variable = 'SHELL'
-format = "$symbol"
-disabled = true
 
 [character]
 success_symbol = ""
@@ -27,8 +27,6 @@ Arch = '󰣇'
 Ubuntu = ''
 Macos = '󰀵'
 
-# ---y
-
 # Shows the username
 [username]
 style_user = 'white bold'
@@ -39,18 +37,18 @@ show_always = true
 
 # Shows the hostname
 [hostname]
-ssh_only = true
 format = 'on [$hostname](bold yellow) '
+ssh_only = true
 disabled = false
 
 # Shows current directory
 [directory]
+format = 'at [$path]($style)[$read_only]($read_only_style) '
 truncation_length = 1
 truncation_symbol = '…/'
 home_symbol = '󰋜 ~'
 read_only_style = '197'
 read_only = '  '
-format = 'at [$path]($style)[$read_only]($read_only_style) '
 
 # Shows current git branch
 [git_branch]
@@ -80,8 +78,6 @@ deleted = '[󰍶 deleted=${count}](red) '
 [kubernetes]
 format = 'via [󱃾 $context\($namespace\)](bold purple) '
 disabled = false
-
-# ---
 
 [vagrant]
 disabled = true
