@@ -9,13 +9,13 @@ $character
 symbol = "╭╴"
 variable = 'SHELL'
 format = "$symbol"
-disabled = false
+disabled = true
 
 [character]
-success_symbol = "╰╴"
-error_symbol = "╰╴"
-
-# ---
+success_symbol = ""
+error_symbol = ""
+# success_symbol = "╰╴"
+# error_symbol = "╰╴"
 
 [os]
 format = '[$symbol](bold white) '   
@@ -39,7 +39,7 @@ show_always = true
 
 # Shows the hostname
 [hostname]
-ssh_only = false
+ssh_only = true
 format = 'on [$hostname](bold yellow) '
 disabled = false
 
