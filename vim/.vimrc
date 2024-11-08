@@ -22,9 +22,9 @@ set hlsearch " Configure search hghlighting
 " set cursorline " Highlight cursor line position
 " set cursorcolumn " Highlight cursor column position
 set mouse=a " Enable mouse in all modes
-set tabstop=4 " Set tab width.
-set softtabstop=4 " Delete tabstop indentations
-set shiftwidth=4 " Set shift width.
+set tabstop=2 " Set tab width.
+set softtabstop=2 " Delete tabstop indentations
+set shiftwidth=2 " Set shift width.
 set expandtab " Use space characters instead of tabs.
 set nocompatible " Disable compatibility with vi which can cause unexpected issues.
 filetype on " Enable type file detection. Vim will be able to try to detect the type of file in use.
