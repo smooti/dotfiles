@@ -1,0 +1,17 @@
+---
+packages:
+  - vim
+  - tmux
+
+config_files:
+  tmux:
+    src: tmux/tmux.conf
+    dest: ~/.tmux.conf
+
+  vim:
+    src: vim/.vimrc
+    dest: ~/
+
+  wezterm:
+    src: wezterm/wezterm.lua
+    dest: ~/.config/wezterm/

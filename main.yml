@@ -1,0 +1,36 @@
+---
+- name: Dotfiles
+  hosts: "{{ my_host | default('localhost') }}"
+  become: false
+  gather_facts: true
+  vars_files:
+    - vars.yml
+  tasks:
+    # - name: Install packages
+    #   become: true
+    #   block:
+    #     - name: Ensure packages are present [RedHat]
+    #       when: "ansible_facts['distribution'] == 'RedHat'"
+    #       ansible.builtin.dnf:
+    #         name: "{{ packages }}"
+    #         state: present
+
+    #     - name: Ensure packages are present [Ubuntu]
+    #       when: "ansible_facts['distribution'] == 'Ubuntu'"
+    #       ansible.builtin.apt:
+    #         name: "{{ packages }}"
+    #         state: present
+
+    - name: Ensure config files are present
+      loop: "{{ lookup('dict', config_files) }}"
+      ansible.builtin.file:
+        src: "{{ item['value']['src'] }}"
+        dest: "{{ item['value']['dest'] }}"
+        state: link
+
+    # - name: Ensure vim plugins are present
+    #   ansible.builtin.command: "/usr/bin/vim -c 'PlugInstall --sync' -c ':qa'"
+
+    # - name: Ensure tmux config is loaded
+    #   when: "ansible_facts['distribution'] == 'Ubuntu' or ansible_facts['distribution'] == 'RedHat'"
+    #   ansible.builtin.command: "/usr/bin/tmux source-file {{ config_files['tmux']['dest'] }}"
