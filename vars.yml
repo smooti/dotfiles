@@ -17,8 +17,8 @@ config_files:
     dest: ~/.config/wezterm
 
   starship:
-    src: "{{ playbook_dir }}/starship"
-    dest: ~/.config/starship
+    src: "{{ playbook_dir }}/starship/starship.toml"
+    dest: ~/.config/starship.toml
 
   zsh:
     src: "{{ playbook_dir }}/zsh/.zshrc"
