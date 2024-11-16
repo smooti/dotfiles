@@ -4,6 +4,9 @@ packages:
   - tmux
 
 config_files:
+  alacritty:
+    src: "{{ playbook_dir }}/alacritty"
+    dest: ~/.config/alacritty
   tmux:
     src: "{{ playbook_dir }}/tmux"
     dest: ~/.config/tmux
