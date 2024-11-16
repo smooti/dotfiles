@@ -1,5 +1,7 @@
 # My Custom Dot Files for MacOS
 
-## Install With [Stow](https://www.gnu.org/software/stow/)
+## Install with ansible
 
-`stow <packageName>`
+```bash
+ansible-playbook main.yml
+```
