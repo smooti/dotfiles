@@ -21,12 +21,25 @@
     #         name: "{{ packages }}"
     #         state: present
 
-    - name: Ensure config files are present
+    # - name: Ensure config path exists
+    #   loop: "{{ lookup('dict', config_files) }}"
+    #   ansible.builtin.file:
+    #     path: "{{ item['value']['dest'] }}"
+    #     state: directory
+
+    - name: Ensure symlinks are present
       loop: "{{ lookup('dict', config_files) }}"
       ansible.builtin.file:
         src: "{{ item['value']['src'] }}"
         dest: "{{ item['value']['dest'] }}"
         state: link
+
+    # - name: Ensure config files are present
+    #   loop: "{{ lookup('dict', config_files) }}"
+    #   ansible.builtin.file:
+    #     src: "{{ item['value']['src'] }}"
+    #     dest: "{{ item['value']['dest'] }}"
+    #     state: link
 
     # - name: Ensure vim plugins are present
     #   ansible.builtin.command: "/usr/bin/vim -c 'PlugInstall --sync' -c ':qa'"
