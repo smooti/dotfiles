@@ -5,13 +5,29 @@ packages:
 
 config_files:
   tmux:
-    src: tmux/tmux.conf
-    dest: ~/.tmux.conf
+    src: "{{ playbook_dir }}/tmux"
+    dest: ~/.config/tmux
 
   vim:
-    src: vim/.vimrc
-    dest: ~/
+    src: "{{ playbook_dir }}/vim/.vimrc"
+    dest: ~/.vimrc
 
   wezterm:
-    src: wezterm/wezterm.lua
-    dest: ~/.config/wezterm/
+    src: "{{ playbook_dir }}/wezterm"
+    dest: ~/.config/wezterm
+
+  starship:
+    src: "{{ playbook_dir }}/starship"
+    dest: ~/.config/starship
+
+  zsh:
+    src: "{{ playbook_dir }}/zsh/.zshrc"
+    dest: ~/.zshrc
+  
+  ansible:
+    src: "{{ playbook_dir }}/ansible/.ansible.cfg"
+    dest: ~/.ansible.cfg
+
+  ansible-navigator:
+    src: "{{ playbook_dir }}/ansible/.ansible-navigator.yml"
+    dest: ~/.ansible-navigator.yml
