@@ -32,6 +32,10 @@ config_files:
     src: "{{ playbook_dir }}/ansible/.ansible.cfg"
     dest: ~/.ansible.cfg
 
+  ghostty:
+    src: "{{ playbook_dir }}/ghostty"
+    dest: ~/.config/ghostty
+
   ansible-navigator:
     src: "{{ playbook_dir }}/ansible/.ansible-navigator.yml"
     dest: ~/.ansible-navigator.yml
